@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Practice</title>
+	<style type="text/css" media="screen">
+		
+		.the-box{
+			width: 300px;
+			height: 500px;
+			background-color: ForestGreen;
+			color: white;
+			padding: 10px;
+			border: 5px solid black;
+			margin: 10px;
+			display: inline-block; /* Functions like a block, but you can put content on the left and on the right. */
+			vertical-align: top; /* The default value is the bottom. */
+		}
+
+	/* 	#the-block, #the-block2 = or
+		#the-block#the-block2 = and
+		#the-block #the-block2 = parent child */
+
+		div{
+			border: 2px solid black;
+		}
+
+		#the-block, #the-block2{
+			width: 50%; /* This will just make margin for however much of the partent level element is left. */
+		}
+
+		#container{
+			width: 50%; /* Will take up 100% of its parent's width. */
+		}
+
+		.meme-holder{
+			width: 300px;
+			border: 5px red solid;
+		}
+
+		img {
+			max-width: 100%; /* This forces the image to be no bigger than the parent div */
+		}
+
+		#nav-bar{
+			height: 60px;
+			background-color: black;
+			color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		body{
+			position: relative; /* Same as static, but setting a specific position for the element */
+		}
+
+		.footer{
+			position: absolute; /* Absolute is relative to its first position (body, see above). Goes the the bottom of the first element that doesn't have a static position. */
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="nav-bar">
+		This is the main nav bar
+	</div>
+
+
+	<!-- Block elements:
+	1. A block level element by default takes up all space to the right and the left possible.
+	2. It can have a height and a width.
+	3. Nothing can be on either side (because it's 100%), and it ignores margin. 
+	4. If you change the size, it will still take up 100%, but the rest outside of the width will be margin.-->
+
+	<div id="container">
+		<div id="the-block">
+			Some text in a block.
+		</div>
+
+		<div id="the-block2">
+			Some more text in a block.
+		</div>
+	</div>
+
+	<!-- Inline elements:
+	1. Respect left and right padding and margin, but NOT top or bottom.
+	2. No problem what's on the left or the right.
+	3. With a few expections(namely img), you CANNOT tell them how big to be (height or width).
+	4. Will gladly ignore all block level rules unless forced otherwise. -->
+
+	<div class="meme-holder">
+		<img src="http://starecat.com/content/wp-content/uploads/two-states-of-every-programmer-i-am-god-i-have-no-idea-what-im-doing.jpg" />
+	</div>
+	<div class="meme-holder">
+		<img src="http://starecat.com/content/wp-content/uploads/two-states-of-every-programmer-i-am-god-i-have-no-idea-what-im-doing.jpg" />
+	</div>
+
+	<div class="the-box">
+		Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
+	</div>
+
+	<div class="the-box">
+		I'm a box!
+	</div>
+	<div class="the-box">
+		I'm a box!
+	</div>
+
+	<div class="footer">
+		Lorem Ipsum
+	</div>
+
+</body>
+</html>
